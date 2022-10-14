@@ -12,7 +12,7 @@ const Header = () => {
       <div className='logo-icon'>
           <img src={Logo2} alt="AOA" />
         </div>
-        <h5>I Welcome you as i indroduce to you </h5>
+        <h5>THE POINTER </h5>
         <h1>AOA Technologies</h1>
         <h5 className="text-light">creating value with tech...</h5>
         <CTA />
