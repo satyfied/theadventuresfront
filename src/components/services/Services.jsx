@@ -31,18 +31,42 @@ const Services = () => {
             </li>
             <li>
               <SiCheckmarx className='service_list-icon' />
-              <p>Web Bases Application Development</p>
-            </li>
-            <li>
-              <SiCheckmarx className='service_list-icon' />
-              <p>Mobile App Development</p>
+              <p>Web Application Development</p>
             </li>
           </ul>
           </article>
           {/*END OF SOFTWARE */}
           <article className="service">
           <div className="service_head">
-            <h3>Creative Designe</h3>
+            <h3>Security and Configuration</h3>
+          </div>
+          <ul className='service_list'>
+            <li>
+              <SiCheckmarx className='service_list-icon' />
+              <p>Home and Office Networking</p>
+            </li>
+            <li>
+              <SiCheckmarx className='service_list-icon' />
+              <p>CCTV Surveillances Installation</p>
+            </li>
+            <li>
+              <SiCheckmarx className='service_list-icon' />
+              <p>Electric Fencing</p>
+            </li>
+            <li>
+              <SiCheckmarx className='service_list-icon' />
+              <p>Solar Installation</p>
+            </li>
+            <li>
+              <SiCheckmarx className='service_list-icon' />
+              <p>Security & Fire Alarm Installation</p>
+            </li>
+          </ul>
+          </article>
+          {/*END OF SURVEILLANCE */}
+          <article className="service">
+          <div className="service_head">
+            <h3>Creative Design</h3>
           </div>
           <ul className='service_list'>
             <li>
@@ -51,7 +75,7 @@ const Services = () => {
             </li>
             <li>
               <SiCheckmarx className='service_list-icon' />
-              <p>Wedding and Complementary Card</p>
+              <p>Wedding & Complementary Card</p>
             </li>
             <li>
               <SiCheckmarx className='service_list-icon' />
@@ -67,43 +91,12 @@ const Services = () => {
             </li>
             <li>
               <SiCheckmarx className='service_list-icon' />
-              <p>UI/UX Designe</p>
+              <p>UI/UX Design</p>
             </li>
           </ul>
           </article>
           {/*END OF Creative */}
-          <article className="service">
-          <div className="service_head">
-            <h3>Security and Configuration</h3>
-          </div>
-          <ul className='service_list'>
-            <li>
-              <SiCheckmarx className='service_list-icon' />
-              <p>Home and Office Networking</p>
-            </li>
-            <li>
-              <SiCheckmarx className='service_list-icon' />
-              <p>Surveillances Camera Installation</p>
-            </li>
-            <li>
-              <SiCheckmarx className='service_list-icon' />
-              <p>Internet Installation</p>
-            </li>
-            <li>
-              <SiCheckmarx className='service_list-icon' />
-              <p>Electric Fencing Installation</p>
-            </li>
-            <li>
-              <SiCheckmarx className='service_list-icon' />
-              <p>Solar Panel Installation</p>
-            </li>
-            <li>
-              <SiCheckmarx className='service_list-icon' />
-              <p>Security and Fire Alarm Installation</p>
-            </li>
-          </ul>
-          </article>
-          {/*END OF SURVEILLANCE */}
+          
           <article className="service">
           <div className="service_head">
             <h3>Others</h3>
@@ -124,6 +117,10 @@ const Services = () => {
             <li>
               <SiCheckmarx className='service_list-icon' />
               <p>Fiber Optic Splicing</p>
+            </li>
+            <li>
+              <SiCheckmarx className='service_list-icon' />
+              <p>Internet Installation</p>
             </li>
             <li>
               <SiCheckmarx className='service_list-icon' />

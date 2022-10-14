@@ -1,5 +1,5 @@
 header{
-    height: 100vh;
+    height: 130vh;
     padding-top: 7rem;
     overflow: hidden;
 }
@@ -8,9 +8,7 @@ header{
     height: 100%;
     position: relative;
 }
-.h5{
-    font-size: 0.1rem;
-}
+
 /* =================== CTA ==================== */
 .cta{
     margin-top: 2.5rem;
@@ -40,13 +38,13 @@ header{
 .me{
     background: linear-gradient(var(--color-primary), transparent) ;
     width: 30rem;
-    height: 30rem;
+    height:fit-content;
     position: absolute;
-    left: calc(50% - 11rem);
-    margin-top: 4rem;
+    left: calc(50% - 15rem);
+    margin-top: 2rem;
     border-radius: 12rem 12rem 0 0;
     overflow: hidden;
-    padding: 5rem 1.5rem 1.5rem 1.5rem;
+    padding: 4rem 2.5rem 1.5rem 2.5rem;
 }
 /* =================== Company Logo ==================== */
 .logo-icon{
@@ -74,7 +72,7 @@ header{
 /*============MEDIA QUERIES (MEDIUM DEVICES)==================*/
 @media screen and (max-width:1024px) {
    header{
-    height: 100vh;
+    height: 67vh;
    }
    .logo-icon{
     background: linear-gradient(var(--color-primary), transparent) ;
@@ -98,7 +96,8 @@ header{
 /*============MEDIA QUERIES (SMALL DEVICES)==================*/
 @media screen and (max-width:600px) {
  header{
-    height: 120vh;
+    height: 80vh;
+
     
  }
  .logo-icon{
@@ -118,6 +117,7 @@ header{
     position: absolute;
     margin-top: 0 auto;
     overflow: hidden;
+    left: calc(50% - 11rem);
 }
  .header_socials, .scroll_down{
     display: none;
