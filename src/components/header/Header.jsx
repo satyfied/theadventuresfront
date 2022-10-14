@@ -2,7 +2,7 @@ import React from 'react'
 import './header.css'
 import CTA from './CTA'
 import Logo from '../../assets/Anima2.gif'
-import Logo2 from '../../assets/AOA.jpg'
+import Logo2 from '../../assets/AOAIcon.png'
 import HeaderSocials from './HeaderSocials'
 
 const Header = () => {

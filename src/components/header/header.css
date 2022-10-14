@@ -48,7 +48,8 @@ header{
 }
 /* =================== Company Logo ==================== */
 .logo-icon{
-    background: linear-gradient(var(--color-primary), transparent) ;
+    background: linear-gradient(var(--color-black), transparent) ;
+    border: 0.3rem solid var(--color-primary-variant);
     width: 10rem;
     height: 10rem;
     position: absolute;
@@ -75,7 +76,9 @@ header{
     height: 67vh;
    }
    .logo-icon{
-    background: linear-gradient(var(--color-primary), transparent) ;
+    background: linear-gradient(var(--color-black), transparent) ;
+    background: linear-gradient(var(--color-black), transparent) ;
+    border: 0.3rem solid var(--color-primary-variant);
     width: 7rem;
     height: 7rem;
     position: absolute;
@@ -101,7 +104,8 @@ header{
     
  }
  .logo-icon{
-    background: linear-gradient(var(--color-primary), transparent) ;
+    background: linear-gradient(var(--color-black), transparent) ;
+    border: 0.3rem solid var(--color-primary-variant);
     width: 4rem;
     height: 4rem;
     position: absolute;
