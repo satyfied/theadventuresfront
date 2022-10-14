@@ -36,7 +36,8 @@ header{
 }
 /* =================== Logo ==================== */
 .me{
-    background: linear-gradient(var(--color-primary), transparent) ;
+    background: white ;
+    /*background: linear-gradient(var(--color-primary), transparent) ;*/
     width: 30rem;
     height:fit-content;
     position: absolute;
