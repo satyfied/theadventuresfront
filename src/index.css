@@ -35,10 +35,7 @@ body{
     color: var(--color-white);
     line-height: 1.7;
     background-image: url(../src/assets/bg-reading.png) ;
-    -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    background-size:cover;
 }
 
 /*=========== GENERAL STYLES ================*/
