@@ -29,7 +29,7 @@ const data = [
     avatar: AVAT2,
     name: "MERCY GROUP CLINICS",
     review:
-      "We have been thrilled to have AOA Technologies experties collection to our pack of contractors. They have been unique and have lots of amazing work ethics and the ability to easily create solution to any problem. I'm very happy that i gave them a go.",
+      "We are thrill to have AOA Technologies experties added to our collection of contractors in our enterprise. They have been unique and have lots of amazing work ethics and the ability to easily create solution to any problem. I'm very happy that I gave them a go.",
   },
   {
     avatar: AVAT3,
