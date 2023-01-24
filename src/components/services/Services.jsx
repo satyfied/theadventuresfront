@@ -83,7 +83,7 @@ const Services = () => {
             </li>
             <li>
               <SiCheckmarx className='service_list-icon' />
-              <p>Sinage and Banner</p>
+              <p>Signage and Banner</p>
             </li>
             <li>
               <SiCheckmarx className='service_list-icon' />

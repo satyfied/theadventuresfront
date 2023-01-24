@@ -41,7 +41,7 @@ const data = [
     avatar: AVAT4,
     name: "TRESAF PHARMACY & STORE",
     review:
-      "Amazing guys with unbilivable attitudes to work. The Sinage Project was a sucess. Great job guys!!!.",
+      "Amazing guys with unbelievable attitudes to work. The Sinage Project was a sucess. Great job guys!!!.",
   },
 ];
 const Testimonial = () => {
