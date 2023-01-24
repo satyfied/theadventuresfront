@@ -21,7 +21,7 @@ import "swiper/swiper.min.css";
 const data = [
   {
     avatar: AVAT1,
-    name: "SOLIDROCK MICROFINANCE",
+    name: "SOLIDROCK MICROFINANCE BANK",
     review:
       "We developed a great partnership with AOA Technologies and their dedication to project is exceptional. We appreciate their attention to details and creative approach to bringing our new exhibit to security.",
   },
