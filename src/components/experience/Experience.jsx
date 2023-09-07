@@ -5,7 +5,7 @@ import 'swiper/swiper.min.css';
 import { Pagination } from 'swiper';
 import './experience.css'
 
-const BACKEND_URL = 'http://localhost:4000/ShowOFFimages'; // Replace with your backend URL
+const BACKEND_URL = 'https://theadventures.onrender.com/ShowOFFimages'; // Replace with your backend URL
 
 const Experience = () => {
 const [model, setModel] = useState(false);

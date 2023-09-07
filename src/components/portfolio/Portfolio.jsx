@@ -5,7 +5,7 @@ import 'swiper/swiper.min.css';
 import { Pagination } from 'swiper';
 import './portfolio.css';
 
-const BACKEND_URL = 'http://localhost:4000/Traditionalimages'; // Replace with your backend URL
+const BACKEND_URL = 'https://theadventures.onrender.com/Traditionalimages'; // Replace with your backend URL
 
 const Portfolio = () => {
   const [model, setModel] = useState(false);

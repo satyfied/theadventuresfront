@@ -6,7 +6,7 @@ import 'swiper/swiper.min.css';
 import { Pagination } from 'swiper';
 
 
-const BACKEND_URL = 'http://localhost:4000/TakeHomeimages'; // Replace with your backend URL
+const BACKEND_URL = 'https://theadventures.onrender.com/TakeHomeimages'; // Replace with your backend URL
 
 const Services = () => {
    const [model, setModel] = useState(false);

@@ -1,4 +1,6 @@
 {
+
+  "homepage": "http://satyfied.github.io/theadventuresfront",
   "name": "react-aoa-technologies",
   "version": "0.1.0",
   "private": true,
@@ -17,7 +19,7 @@
     "react-dom": "^18.2.0",
     "react-icon": "^1.0.0",
     "react-icons": "^4.4.0",
-    "react-scripts": "^2.1.8",
+    "react-scripts": "^5.0.1",
     "react-slider-swiper": "^2.0.6",
     "swiper": "^8.4.4",
     "web-vitals": "^2.1.4"
@@ -26,7 +28,9 @@
     "start": "react-scripts start",
     "build": "npm i",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -45,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
   }
 }
