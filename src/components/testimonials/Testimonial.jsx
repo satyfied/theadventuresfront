@@ -1,9 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 import "./testimonial.css";
-import AVAT1 from "../../assets/AVAT1.jpg";
-import AVAT2 from "../../assets/AVAT2.jpg";
-import AVAT3 from "../../assets/AVAT3.jpg";
-import AVAT4 from "../../assets/AVAT4.jpg";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+import AVAT1 from "../../assets/videos/Anjy Proposal.mp4";
+import AVAT2 from "../../assets/videos/V1.mp4";
+import AVAT3 from "../../assets/videos/V2.mp4";
+import AVAT4 from "../../assets/videos/V3.mp4";
+import AVAT5 from "../../assets/videos/V4.mp4";
+import AVAT6 from "../../assets/videos/V5.mp4";
+import AVAT7 from "../../assets/videos/V6.mp4";
+import AVAT8 from "../../assets/videos/V7.mp4";
+import AVAT9 from "../../assets/videos/V8.mp4";
+import AVAT10 from "../../assets/videos/V9.mp4";
+import AVAT11 from "../../assets/videos/V10.mp4";
+import AVAT12 from "../../assets/videos/V11.mp4";
+import AVAT13 from "../../assets/videos/V12.mp4";
+import AVAT14 from "../../assets/videos/V13.mp4";
+import AVAT15 from "../../assets/videos/V14.mp4";
+import Thumb from "../../assets/logo.jpg";
 
 // import required modules
 import { Pagination } from "swiper";
@@ -19,54 +33,71 @@ import "swiper/swiper.min.css";
 //import "./styles.css";
 
 const data = [
-  {
-    avatar: AVAT1,
-    name: "SOLIDROCK MICROFINANCE BANK",
-    review:
-      "We developed a great partnership with AOA Technologies and their dedication to project is exceptional. We appreciate their attention to details and creative approach to bringing our new exhibit to security.",
-  },
-  {
-    avatar: AVAT2,
-    name: "MERCY GROUP CLINICS",
-    review:
-      "We are thrill to have AOA Technologies experties added to our collection of contractors in our enterprise. They have been unique and have lots of amazing work ethics and the ability to easily create solution to any problem. I'm very happy that I gave them a go.",
-  },
-  {
-    avatar: AVAT3,
-    name: "SINOTRUST MINNING",
-    review:
-      "AOA Technologies' staff is really what break the Ice. This Company have got great set of people. They are wonderful and always working hard. Keep up the good work guys and thank you for being trust worthy.",
-  },
-  {
-    avatar: AVAT4,
-    name: "TRESAF PHARMACY & STORE",
-    review:
-      "Amazing guys with unbelievable attitudes to work. The Sinage Project was a sucess. Great job guys!!!.",
-  },
+  { videoSrc: AVAT1},{videoSrc: AVAT2 }, { videoSrc: AVAT3 },{videoSrc: AVAT4 },{videoSrc: AVAT5 },
+  { videoSrc: AVAT6},{videoSrc: AVAT7 }, { videoSrc: AVAT8 },{videoSrc: AVAT9 },{videoSrc: AVAT10 },
+  { videoSrc: AVAT11},{videoSrc: AVAT12 }, { videoSrc: AVAT13 },{videoSrc: AVAT14 },{videoSrc: AVAT15 }
 ];
+
+ 
+
 const Testimonial = () => {
+
+  const [model, setModel] = useState(false);
+  const [tempVideoSrc, setTempVideoSrc] = useState("");
+
+  const getVideo = (videoSrc) => {
+    setTempVideoSrc(videoSrc);
+    setModel(true);
+  };
+  const closeModal = () => {
+    setModel(false);
+  };
   return (
-    <section id="testimonials">
-      <h5>Review from clients</h5>
-      <h2>Testimonials</h2>
+    <section id="videos">
+      <h5>Get The Tomis In Action</h5>
+      <h2>VIDEOS</h2>
+      <div className={model ? "model open" : "model"}>
+        <video controls autoPlay>
+          <source src={tempVideoSrc} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <button className="close-button" onClick={closeModal}>
+          <i className="fas fa-times"></i> {/* Close icon */}
+        </button>
+      </div>
       {/*Swiper pagination={true} modules={[Pagination]}*/}
       <Swiper
         pagination={true}
         modules={[Pagination]}
         className="container testimonials_container"
       >
-        {data.map(({ avatar, name, review }, index) => {
+        <div className={model ? "model open" : "model"}>
+                <source src={tempVideoSrc} type="video/mp4" onClick={closeModal} />
+                <button className="close-button" onClick={closeModal}>
+            <i className="fas fa-times"></i> {/* You can replace this with your preferred icon */}
+          </button>
+                {/* <Collapse  onClick={() => setModel(false)} /> */}
+            </div>
+
+        {data.map(({ videoSrc }, index) => {
           return (
-            <SwiperSlide key={index} className="testimonial">
+            <SwiperSlide key={index} className="testimonial" onClick={() => getVideo(videoSrc)}>
               <div className="client_avatar">
-                <img src={avatar} alt="Avatar One" />
+                <img src={Thumb} alt="Video Thumbnail" />
               </div>
-              <h5 className="client_name">{name}</h5>
-              <small className="client_review">{review}</small>
             </SwiperSlide>
           );
         })}
       </Swiper>
+      {model && (
+        <div className="model open">
+          <video controls autoPlay>
+            <source src={tempVideoSrc} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <button className="close-button" onClick={() => setModel(false)}>Close</button>
+        </div>
+      )}
     </section>
   );
 };

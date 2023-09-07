@@ -1,8 +1,8 @@
 import React from 'react'
 import './header.css'
 import CTA from './CTA'
-import Logo from '../../assets/Anima2.gif'
-import Logo2 from '../../assets/AOAIcon.png'
+import Logo from '../../assets/logo.jpg'
+import Logo2 from '../../assets/loveSign.jpg'
 import HeaderSocials from './HeaderSocials'
 
 const Header = () => {
@@ -12,9 +12,9 @@ const Header = () => {
       <div className='logo-icon'>
           <img src={Logo2} alt="AOA" />
         </div>
-        <h3>THE POINTER </h3>
-        <h1>AOA Technologies</h1>
-        <h5 className="text-light">creating value with tech...</h5>
+        <h3 style={{color: 'black'}}> IMAGE GALLERY </h3>
+        <h1 style={{color: 'var(--color-primary-variant)'}}> THE ADVENTURES OF THE TOMIS</h1>
+        <h5 className="text-light">Love story like no other...</h5>
         <CTA />
 <HeaderSocials />
 

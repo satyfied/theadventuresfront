@@ -1,87 +1,66 @@
-import React from 'react'
-import './portfolio.css'
-import IMG1 from '../../assets/Gallery1.gif'
-import IMG2 from '../../assets/Gallery2.gif'
-import IMG3 from '../../assets/Gallery3.gif'
-import IMG4 from '../../assets/Gallery4.gif'
-import IMG5 from '../../assets/Gallery5.gif'
-import IMG6 from '../../assets/Gallery6.gif'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'; // Import Axios for making HTTP requests
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper.min.css';
+import { Pagination } from 'swiper';
+import './portfolio.css';
 
+const BACKEND_URL = 'http://localhost:3001/Traditionalimages'; // Replace with your backend URL
 
-// Array of Images====================//
-
-const data =[
-  {
-    id: 1,
-    image: IMG1,
-    title: 'ICT Training',
-    youtube: '',
-    demo: ''
-  },
-  {
-    id: 2,
-    image: IMG2,
-    title: 'Web Design',
-    youtube: '',
-    demo: ''
-  },
-  {
-    id: 3,
-    image: IMG3,
-    title: 'Office Setup',
-    youtube: '',
-    demo: ''
-  },
-  {
-    id: 4,
-    image: IMG4,
-    title: 'Enterprise Application',
-    youtube: '',
-    demo: ''
-  },
-  {
-    id: 5,
-    image: IMG5,
-    title: 'Educational Application',
-    youtube: '',
-    demo: ''
-  },
-  {
-    id: 6,
-    image: IMG6,
-    title: 'Creative Designs',
-    youtube: '',
-    demo: ''
-  },
-]
 const Portfolio = () => {
+  const [model, setModel] = useState(false);
+  const [tempimgSrc, setTempImgSrc] = useState('');
+  const [driveImages, setDriveImages] = useState([]);
+
+  useEffect(() => {
+    fetchImages();
+  }, []);
+
+  const fetchImages = async () => {
+    try {
+      // Fetch images from your Node.js backend
+      const response = await axios.get(`${BACKEND_URL}`);
+
+      // Set the retrieved images in state
+      setDriveImages(response.data);
+    } catch (error) {
+      console.error('Error fetching images:', error);
+    }
+  };
+
+  const getImg = (imgSrc) => {
+    setTempImgSrc(imgSrc);
+    setModel(true);
+  };
+  const closeModal = () => {
+    setModel(false);
+  };
+
   return (
-    <section id='portfolio'>
-     <h5>Our Recent Work</h5>
-     <h2>Gallery</h2>
+    <section id="tradition">
+      <h5>Our Forever Day</h5>
+      <h2>TRADITIONAL WEDDING SHOT</h2>
 
-     <div className="container portfolio_container">
-      {
-        data.map(({id, image, title, youtube, demo}) =>{
+      <Swiper pagination={true} modules={[Pagination]} className="gallery">
+        <div className={model ? 'model open' : 'model'}>
+           <img src={tempimgSrc} alt="Gallery" onClick={closeModal} />
+          <button className="close-button" onClick={closeModal}>
+            <i className="fas fa-times"></i> {/* You can replace this with your preferred icon */}
+          </button>
+        </div>
+        {driveImages.map(({ webContentLink, id }, index) => {
+          // const formattedImageUrl = formatImageUrl(imageUrl);
           return (
-            <article key={id} className='portfolio_item'>
-          <div className="portfolio_item-image">
-            <img src={image} alt={title} />
-            </div>
-            <h3>{title} </h3>
-            <div className="portfolio_item-cta">
-            <a href={youtube} className='btn' target='-blank'>Youtube</a>
-            <a href={demo} className='btn btn-primary' target='-blank'>Live Demo </a>
-            </div>
-            </article>
-          )
-        })
-      }
-      
-
-          </div> 
+            <SwiperSlide key={id} className="pics" onClick={() => getImg(webContentLink)}>
+              <div className="avatar">
+                <img src={webContentLink} alt={`Avatar ${index}`} />
+              </div>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </section>
-  )
-}
+  );
+};
 
-export default Portfolio
+export default Portfolio;

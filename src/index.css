@@ -9,12 +9,12 @@
     text-decoration: none;
 }
 :root {
-    --color-bg:#1f1f38;
-    --color-bg-variant:#2c2c6c;
-    --color-primary:#4db5ff;
-    --color-primary-variant:rgba(77, 181, 255, 0.4);
-    --color-white: #fff;
-    --color-light: rgba(255, 255, 255, 0.6);
+    /* --color-bg:#babacf; */
+    --color-bg-variant:#e2e2ed;
+    --color-primary:#bc642e;
+    --color-primary-variant:rgba(138, 9, 45, 0.776);
+    --color-white: #efeae8;
+    --color-light: rgba(8, 4, 4, 0.6);
 
     --transition: all 400ms ease;
 
@@ -34,7 +34,7 @@ body{
     background: var(--color-bg);
     color: var(--color-white);
     line-height: 1.7;
-    background-image: url(../src/assets/AOAbg.jpg) ;
+    /* background-image: url(../src/assets/AOAbg.jpg) ; */
     background-size:cover;
 }
 

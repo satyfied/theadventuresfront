@@ -1,9 +1,9 @@
 import React from 'react'
 import './about.css'
-import Me from '../../assets/Anima.gif'
-import{FaAward} from  'react-icons/fa'
+import Me from '../../assets/loveSign.jpg'
+import{GiSelfLove} from  'react-icons/gi'
 import{FiUsers} from  'react-icons/fi'
-import{VscFolderLibrary} from  'react-icons/vsc'
+import{GiLovers} from  'react-icons/gi'
 
 const About = () => {
   return (
@@ -19,28 +19,24 @@ const About = () => {
       <div className="about_content">
         <div className="about_cards">
           <article className='about_card'>
-            <FaAward className='about_icon'/>
-            <h5>Experience</h5>
-            <small> vast Years of Working</small>
+            <GiSelfLove className='about_icon'/>
+            <h5 style={{color: 'var(--color-primary-variant)'}}>WE MET</h5>
+            <small> Spt 2016</small>
           </article>
           
           <article className='about_card'>
             <FiUsers className='about_icon'/>
-            <h5>Clients</h5>
-            <small> 200+ Worldwide</small>
+            <h5 style={{color: 'var(--color-primary-variant)'}}>WE DATE</h5>
+            <small> Feb 11th 2021</small>
           </article>
 
           <article className='about_card'>
-            <VscFolderLibrary className='about_icon'/>
-            <h5>Projects</h5>
-            <small> 40+ Project</small>
+            <GiLovers className='about_icon'/>
+            <h5 style={{color: 'var(--color-primary-variant)'}}>COMMIT</h5>
+            <small> 5th August 2023</small>
           </article>
         </div>
-        <p>
-        AOA Technologies is a new generation Information Technology Company, with extensive experience in designing, developing and implementing complete cutting edge IT solutions using latest world class technologies.
-We are a multifaceted Information Technology firm with a team of seasoned IT experts that have several years of experience in various fields of Information Technology.
-        </p>
-        <a href="#contact" className='btn btn-primary'>Let's Talk</a>
+        
       </div>
      </div>
 
