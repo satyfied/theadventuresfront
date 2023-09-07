@@ -5,7 +5,7 @@ import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 
-const BACKEND_URL = 'http://localhost:3001/Whiteimages'; // Replace with your backend URL
+const BACKEND_URL = 'http://localhost:4000/Whiteimages'; // Replace with your backend URL
 const Contact = () => {
   const [model, setModel] = useState(false);
   const [tempimgSrc, setTempImgSrc] = useState('');
