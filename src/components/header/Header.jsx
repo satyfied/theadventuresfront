@@ -10,7 +10,7 @@ const Header = () => {
     <header>
       <div className="container header_container">
       <div className='logo-icon'>
-          <img src={Logo2} alt="AOA" />
+          <img src={Logo2} alt="Anjy" />
         </div>
         <h3 style={{color: 'black'}}> IMAGE GALLERY </h3>
         <h1 style={{color: 'var(--color-primary-variant)'}}> THE ADVENTURES OF THE TOMIS</h1>
